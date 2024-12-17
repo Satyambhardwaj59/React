@@ -1,0 +1,11 @@
+#heading{
+    color: red;
+    font-size: 35px;
+}
+
+#box{
+    margin-top: 30px;
+    background-color: aqua;
+    height: 50px;
+    /* width: 30px; */
+}

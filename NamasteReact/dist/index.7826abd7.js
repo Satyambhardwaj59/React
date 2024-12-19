@@ -2952,19 +2952,164 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _client = require("react-dom/client");
 var _clientDefault = parcelHelpers.interopDefault(_client);
 // JSX (transpiled before it reaches the JS) - PARCEL - Babel
-// JSX ==> React.createElement ==> ReactElement - JS Object ==> HTMLElement(render)
+// JSX ==> Babel transpiles it to React.createElement ==> ReactElement - JS Object ==> HTMLElement(render)
 //const heading = React.createElement("h1", {id: "heading"}, "Hello everyone");
 // JSX 
-const jsxHading = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-    id: "heading",
-    children: " Hello everyone form  JSX"
+// React element
+const reactElement = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+    id: "headingRE",
+    children: " Hello babe!"
 }, void 0, false, {
     fileName: "App.js",
-    lineNumber: 13,
-    columnNumber: 19
+    lineNumber: 16,
+    columnNumber: 5
+}, undefined);
+// const jsxHading = <h1 id = "heading"> Hello everyone form  JSX</h1>
+// React component -- 1. React functional component,  2. React Class component.
+// React functional component
+// const HeadingComponent = () => {
+//    return <h1 id = "heading"> Hello everyone form  JSX in React functional component</h1>;
+// }
+// same like below and upper code 
+const HeadingComponent = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+        id: "heading",
+        children: " Hello everyone form  JSX in React functional component"
+    }, void 0, false, {
+        fileName: "App.js",
+        lineNumber: 31,
+        columnNumber: 33
+    }, undefined);
+_c = HeadingComponent;
+const Title = ()=>// <h3 className="titleClass">This is the React Functional component Title</h3>,
+    [
+        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Test, {}, void 0, false, {
+            fileName: "App.js",
+            lineNumber: 35,
+            columnNumber: 5
+        }, undefined),
+        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+            className: "secTitle",
+            children: "This is second title"
+        }, void 0, false, {
+            fileName: "App.js",
+            lineNumber: 36,
+            columnNumber: 5
+        }, undefined)
+    ];
+_c1 = Title;
+// Component composition => component in a Component;
+const HeadingComponentComposition = ()=>[
+        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(LetTry, {}, void 0, false, {
+            fileName: "App.js",
+            lineNumber: 43,
+            columnNumber: 6
+        }, undefined),
+        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "container",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {}, void 0, false, {
+                    fileName: "App.js",
+                    lineNumber: 45,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                    id: "heading",
+                    children: " Hello everyone form  JSX in React functional component compogison"
+                }, void 0, false, {
+                    fileName: "App.js",
+                    lineNumber: 46,
+                    columnNumber: 9
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "App.js",
+            lineNumber: 44,
+            columnNumber: 5
+        }, undefined)
+    ];
+_c2 = HeadingComponentComposition;
+const LetTry = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "test",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            id: "testPara",
+            children: "Hello ji kaise ho aap"
+        }, void 0, false, {
+            fileName: "App.js",
+            lineNumber: 53,
+            columnNumber: 9
+        }, undefined)
+    }, void 0, false, {
+        fileName: "App.js",
+        lineNumber: 52,
+        columnNumber: 5
+    }, undefined);
+_c3 = LetTry;
+const Test = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            children: "How are you test"
+        }, void 0, false, {
+            fileName: "App.js",
+            lineNumber: 59,
+            columnNumber: 9
+        }, undefined)
+    }, void 0, false, {
+        fileName: "App.js",
+        lineNumber: 58,
+        columnNumber: 5
+    }, undefined);
+_c4 = Test;
+// {} => write any JS expression in this 
+const Element = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            ele,
+            Test(),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Test, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 68,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Test, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 69,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: "Hii react js how are you"
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 70,
+                columnNumber: 9
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "App.js",
+        lineNumber: 65,
+        columnNumber: 5
+    }, undefined);
+_c5 = Element;
+const ele = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+    children: "Hello ji kaise ho aap"
+}, void 0, false, {
+    fileName: "App.js",
+    lineNumber: 75,
+    columnNumber: 5
 }, undefined);
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
-root.render(jsxHading);
+//root.render(jsxHading);
+// root.render(<HeadingComponent />);
+// root.render(<HeadingComponentComposition />);
+root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Element, {}, void 0, false, {
+    fileName: "App.js",
+    lineNumber: 86,
+    columnNumber: 13
+}, undefined));
+var _c, _c1, _c2, _c3, _c4, _c5;
+$RefreshReg$(_c, "HeadingComponent");
+$RefreshReg$(_c1, "Title");
+$RefreshReg$(_c2, "HeadingComponentComposition");
+$RefreshReg$(_c3, "LetTry");
+$RefreshReg$(_c4, "Test");
+$RefreshReg$(_c5, "Element");
 
   $parcel$ReactRefreshHelpers$c1db.postlude(module);
 } finally {

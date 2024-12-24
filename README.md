@@ -19,3 +19,32 @@
 - HTTPs
 - Tree Shaking - remove unused code
 - Different dev and prod bundles
+
+# my Own Food App
+
+ * Header
+ * - Logo
+ * - Nav Items
+ * Body
+ * - Search 
+ * - Restaurant cantainer
+ *      - RestaurentCart
+ *          - Img
+ *          - Name of Res, Star Rating, cuisine, delavery time
+ * Footer
+ * - Copyright
+ * - Links
+ * - Address
+ * - Contact
+
+# Types of Export/Import
+
+1 Default export/import (only one file can be exported..)
+
+- export default Component;
+- import Component from "path";
+
+2 Named export/import (many file can be exported...)
+
+- export const Variable/Component; 
+- import {Variable/Component} from "path";

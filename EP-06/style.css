@@ -1,0 +1,64 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+
+.logo {
+    width: 100px;
+}
+
+.nav-items ul{
+    display: flex;
+    gap: 1.5rem;
+    margin-right: 20px;
+    list-style: none;
+    font-size: 24px;
+}
+
+.res-card {
+    width: 200px;
+    padding: 5px;
+    margin: 0px;
+}
+
+.res-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.res-card:hover {
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.search {
+    padding: 10px;
+}
+
+.res-logo {
+    width: 100%;
+    height: 170px;
+}
+
+.card-dec h3, h4{
+    margin: 5px 0;
+}
+
+.card-dec h3{
+    color: orangered;
+}
+
+.body {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.filter-btn {
+    margin: 20px;
+    cursor: pointer;
+}

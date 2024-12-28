@@ -48,3 +48,7 @@
 
 - export const Variable/Component; 
 - import {Variable/Component} from "path";
+
+# Conditional rendering :- rendering accoring to the condition is known as conditional rendering
+
+# Whenever state variable update, react triggers a reconciliation cycle (re-renders the component)

@@ -90,5 +90,16 @@
 }
 
 .some-space{
-    margin: 5rem;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin: 5rem auto;
+}
+.some-space h1, h2{
+    margin: 5px;
+}
+
+.some-space-for-error{
+    display: flex;
+    justify-content: center;
 }

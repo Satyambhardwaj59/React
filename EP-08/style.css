@@ -110,6 +110,8 @@ a {
 }
 
 .user-card {
+    display: flex;
+    justify-content: space-around;
     margin: 2rem 1rem;
     padding: 10px;
     border: 1px solid black;
@@ -119,4 +121,10 @@ a {
     margin: 2rem 1rem;
     padding: 10px;
     border: 1px solid orangered;
+}
+
+.avatarImg {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
 }

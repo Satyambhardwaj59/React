@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "This is Namaste React cource",
   "scripts": {
-    "start": "parcel EP-08/index.html",
-    "build": "parcel build EP-08/index.html",
+    "start": "parcel EP-09/index.html",
+    "build": "parcel build EP-09/index.html",
     "test": "jest"
   },
   "repository": {

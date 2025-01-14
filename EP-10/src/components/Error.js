@@ -6,7 +6,7 @@ const Error = () => {
     console.log(err);
     
     return (
-        <div className="some-space-for-error">
+        <div className="flex justify-center items-center h-screen">
             <img src={URL_Err} alt="error" />
             {/* <h1>Ooops!!!</h1>
             <h2>Something Wants Wrong</h2>

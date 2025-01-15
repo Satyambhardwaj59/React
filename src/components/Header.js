@@ -15,16 +15,16 @@ const Header = () => {
             <img className="w-[120] ml-4" src = {URL_LOGO}  alt="logo" />
           </div>  
           <div className="flex items-center ">
-            <ul className="flex space-x-6 p-3 m-3 text-2xl">
-                <li> <Link to="/">Home</Link></li>
-                <li> <Link to="/about">About us</Link></li>
-                <li> <Link to="/contact">Contact us</Link></li>
-                <li> <Link to="/grocary">Grocary</Link></li>
-                <li> <Link to="/cart">Cart</Link></li>
+            <ul className="flex space-x-6 p-3 m-3 text-2xl ">
+                <li className="hover:border-b-2 hover:border-solid hover:border-black hover:bg-pink-400 hover:px-2"> <Link to="/">Home</Link></li>
+                <li className="hover:border-b-2 hover:border-solid hover:border-black hover:bg-pink-400 hover:px-2"> <Link to="/about">About us</Link></li>
+                <li className="hover:border-b-2 hover:border-solid hover:border-black hover:bg-pink-400 hover:px-2"> <Link to="/contact">Contact us</Link></li>
+                <li className="hover:border-b-2 hover:border-solid hover:border-black hover:bg-pink-400 hover:px-2"> <Link to="/grocary">Grocary</Link></li>
+                <li className="hover:border-b-2 hover:border-solid hover:border-black hover:bg-pink-400 hover:px-2"> <Link to="/cart">Cart</Link></li>
                 <button className="border-2 border-solid border-black bg-orange-600 text-white px-2 py-1 rounded-lg" onClick={() => {
                   btnNameReact ==="Login" ? setBtnNameReact("Logout") : setBtnNameReact("Login");
                 }}>{btnNameReact}</button>
-                <li>Online Status : {onlineStatus ? "✅" : "🔴"} </li>
+                <li className="hover:border-b-2 hover:border-solid hover:border-black hover:bg-pink-400 hover:px-2">Online Status : {onlineStatus ? "✅" : "🔴"} </li>
             </ul>
           </div>
 

@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, {withFlatOffer} from "./RestaurantCard";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router";
@@ -11,6 +11,11 @@ const Body = () => {
     const [filterdRestaurant, setFilterdRestaurant] = useState([]);
 
     const [searchText, setSearchText] = useState("");
+
+    console.log(listOfResto);
+
+    const RestaurantCardWithOffer = withFlatOffer(RestaurantCard);
+    
 
     useEffect(() => {
         fetchData();
@@ -54,7 +59,12 @@ const Body = () => {
             <div className="flex flex-wrap justify-around space-y-4">
                 {
                     filterdRestaurant.map(restaurant => (
-                   <Link key = {restaurant.info.id} to={"/restaurent/" + restaurant.info.id}> <RestaurantCard  resData = {restaurant} /> </Link>
+                   <Link key = {restaurant.info.id} to={"/restaurent/" + restaurant.info.id}>
+                  {
+                        restaurant.info.avgRating > 4.2 ? <RestaurantCardWithOffer  resData = {restaurant} /> :
+                        <RestaurantCard  resData = {restaurant} />
+                  }
+                     </Link>
                 ))}
                 
             </div>

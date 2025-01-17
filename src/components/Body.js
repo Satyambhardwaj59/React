@@ -2,6 +2,7 @@ import RestaurantCard, {withFlatOffer} from "./RestaurantCard";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router";
+import { URL_RESTAURANT_CARD } from "../utils/constants"
 import useOnlineStatus from "../utils/useOnlineStatus";
 
 
@@ -12,8 +13,6 @@ const Body = () => {
 
     const [searchText, setSearchText] = useState("");
 
-    console.log(listOfResto);
-
     const RestaurantCardWithOffer = withFlatOffer(RestaurantCard);
     
 
@@ -22,7 +21,7 @@ const Body = () => {
     }, []);
 
     const fetchData = async () => {
-        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.7040592&lng=77.10249019999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+        const data = await fetch(URL_RESTAURANT_CARD);
 
         const json = await data.json();
 

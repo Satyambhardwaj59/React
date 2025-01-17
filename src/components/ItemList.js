@@ -13,7 +13,7 @@ const ItemList = ({items}) => {
                         <div className='w-9/12 text-left'>
                             <div className='flex ml-4 space-x-6'>
                                 <div className='mt-4'>
-                                    <span className='text-3xl border border-black border-solid p-1 rounded-lg'>{isVeg ? "🌱": "🔴"}</span>                
+                                    <span className='text-3xl border-2 border-black border-solid p-1 rounded-lg'>{isVeg ? "🌱": "🔴"}</span>                
                                 </div>
                                 <div>
                                     <h1 className='font-semibold text-xl pt-2'>{name}</h1>
@@ -36,20 +36,3 @@ const ItemList = ({items}) => {
 }
 
 export default ItemList;
-
-{/* 
-     {items.map((items) => {
-                <div key={items.card.info.id}
-                className="p-2 m2 bg-gray-100 shadow-lg flex justify-between">
-                    <img src={URL_MOOK + items.card.info.imageId } className='w-16' alt="" />
-                    <div>
-                        <h1>{items.card.info.name}</h1>
-                        <h2>{items.card.info.price ? items.card.info.price / 100 : items.card.info.defaultPrice / 100}</h2>
-
-                    </div>
-
-                    <p className='text-xs'>{items.card.info.description}</p>
-                    
-                </div>
-            })}
-    */}

@@ -1,10 +1,16 @@
-// rafce sortcut for creating functional component
+import ItemList from "./ItemList";
+import { useSelector } from "react-redux";
+
 
 const Cart = () => {
+    const cartItems = useSelector((store) => store.cart.item);
+    
     return (
-        <div className="flex flex-col justify-center items-center h-screen text-4xl">
-            <h1>Welcome in cart section </h1>
-            <h2>you are added this product in your Cart</h2>
+        <div className="my-5 p-4 ">
+            <h1 className="text-center text-2xl font-bold">Cart</h1>
+            
+            <ItemList items={cartItems} />
+            
         </div>
         
     )

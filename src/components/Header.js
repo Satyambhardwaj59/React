@@ -3,13 +3,18 @@ import { useState, useContext } from "react";
 import { Link } from "react-router";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
-// import Grocary from './Grocary';
+import { useSelector } from "react-redux";
+
 
 const Header = () => {
 
   const [btnNameReact, setBtnNameReact] = useState("Login");
   const onlineStatus = useOnlineStatus();
   const {loggedInUser} = useContext(UserContext);
+
+  // Selector
+
+  const cartItems = useSelector((store) => store.cart.items);
 
     return (
         <div className="flex justify-between bg-pink-200 my-4 shadow-lg">
@@ -22,7 +27,7 @@ const Header = () => {
                 <li className="hover:border-b-2 hover:border-solid hover:border-black hover:bg-pink-400 hover:px-2"> <Link to="/about">About us</Link></li>
                 <li className="hover:border-b-2 hover:border-solid hover:border-black hover:bg-pink-400 hover:px-2"> <Link to="/contact">Contact us</Link></li>
                 <li className="hover:border-b-2 hover:border-solid hover:border-black hover:bg-pink-400 hover:px-2"> <Link to="/grocary">Grocary</Link></li>
-                <li className="hover:border-b-2 hover:border-solid hover:border-black hover:bg-pink-400 hover:px-2"> <Link to="/cart">Cart</Link></li>
+                <li className="hover:border-b-2 hover:border-solid hover:border-black hover:bg-pink-400 hover:px-2"><Link to="/cart"> Cart -({cartItems.length} items)</Link></li>
                 <button className="border-2 border-solid border-black bg-orange-600 text-white px-2 py-1 rounded-lg" onClick={() => {
                   btnNameReact ==="Login" ? setBtnNameReact("Logout") : setBtnNameReact("Login");
                 }}>{btnNameReact}</button>

@@ -12,9 +12,11 @@ const Header = () => {
   const onlineStatus = useOnlineStatus();
   const {loggedInUser} = useContext(UserContext);
 
-  // Selector
+  // Subscribing to the store using a Selector
 
   const cartItems = useSelector((store) => store.cart.items);
+  console.log(cartItems);
+  
 
     return (
         <div className="flex justify-between bg-pink-200 my-4 shadow-lg">

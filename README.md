@@ -49,6 +49,20 @@
 - export const Variable/Component; 
 - import {Variable/Component} from "path";
 
-# Conditional rendering :- rendering accoring to the condition is known as conditional rendering
+# Conditional rendering :
+- rendering accoring to the condition is known as conditional rendering
 
-# Whenever state variable update, react triggers a reconciliation cycle (re-renders the component)
+- Whenever state variable update, react triggers a reconciliation cycle (re-renders the component)
+
+# Redux Toolkit
+- Install @reduxjs/toolkit and react-redux
+- Build our store
+- Connect our store to our app
+- Slice(cartSlice)
+- dispatch(action)
+- Selector
+
+# Types of testing (Devloper)
+- Unit Testing
+- Integration Testing
+- End to End Testing - e2e testing

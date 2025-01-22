@@ -17,6 +17,7 @@
   "author": "Satyam",
   "license": "ISC",
   "devDependencies": {
+    "@testing-library/react": "^16.2.0",
     "parcel": "^2.13.3",
     "postcss": "^8.4.49",
     "process": "^0.11.10",

@@ -62,7 +62,18 @@
 - dispatch(action)
 - Selector
 
+...
 # Types of testing (Devloper)
 - Unit Testing
 - Integration Testing
 - End to End Testing - e2e testing
+
+...
+# Setting up Testing in our app
+- Install React Testing Library (npm i -D @testing-library/react)
+- Install jest (npm i -D jest)
+- Installed Babel dependencies (npm install --save-dev babel-jest @babel/core @babel/preset-env)
+- Configure Babel (babel.config.js file)
+- Configure Parcel Config file to disable default babel transpilation (.parcelre file)
+- Configure Jest (npx jest --init) (jest.config.js file)
+- Install jsdom library (npm i -D jest-environment-jsdom)

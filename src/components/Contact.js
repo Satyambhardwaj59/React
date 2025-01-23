@@ -1,8 +1,13 @@
 const Contact = () => {
     return (
-        <div className="flex flex-col justify-center items-center h-screen text-4xl">
-            <h1>Lets contact us </h1>
-            <h2>There are contact details</h2>
+        <div className="m-4 p-4">
+            <h1 className="items-center text-2xl">Heading </h1>
+            
+            <form >
+                <input type="text" placeholder="Name" className="border border-black p-2 m-4" />
+                <input type="text" placeholder="Message" className="border border-black p-2 m-4" />
+                <button className="border border-black p-2 rounded-lg bg-gray-100">Submit</button>
+            </form>
         </div>
     )
 }

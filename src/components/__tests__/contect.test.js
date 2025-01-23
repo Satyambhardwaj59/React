@@ -33,3 +33,24 @@ test("Should load Buttom component", () => {
     expect(button).toBeInTheDocument();
      
 });
+
+
+// to find multiple Role(tag)
+
+test("Should load input box component", () => {
+    render(<Contact/>)
+
+    // Queary
+    //const inputBoxes = screen.getAllByRole("textbox");
+    const inputBoxes = screen.getByPlaceholderText("Name");
+  
+    console.log(inputBoxes);  // Return React element array
+    
+    //console.log(inputBoxes.length);
+    
+    //Asertion
+    // expect(inputBoxes.length).not.toBe(2);
+    
+    expect(inputBoxes).toBeInTheDocument();
+     
+});

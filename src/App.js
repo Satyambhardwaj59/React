@@ -10,6 +10,7 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router";
 import UserContext from "./utils/UserContext";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
+import Footer from "./components/Footer"
 
 
 const About = lazy(() => import("./components/About"));
@@ -32,6 +33,7 @@ const AppLayout = () => {
                 <div className="app">
                     <Header/>
                     <Outlet/>
+                    <Footer/>
                 </div>
             </UserContext.Provider>
         </Provider>

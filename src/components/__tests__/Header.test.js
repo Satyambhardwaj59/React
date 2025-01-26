@@ -1,20 +1,19 @@
-// import React from "react";
 // import { render } from "@testing-library/react";
-// import Header from "../Header";
 // import { Provider } from "react-redux";
+// import Header from "../Header";
 // import appStore from './../../utils/appStore';
 // import { BrowserRouter } from "react-router";
 
 
-// // it('Header test', () => {
-// //     render(
-// //         <BrowserRouter>
-// //         <Provider store={appStore}>
-// //             <Header/>
-// //         </Provider>
-// //         </BrowserRouter>
-// //     )
-// // });
+// it('Header test', () => {
+//     render(
+//         <BrowserRouter>
+//         <Provider store={appStore}>
+//             <Header/>
+//         </Provider>
+//         </BrowserRouter>
+//     )
+// });
 
 import { sum } from "../sum";
 

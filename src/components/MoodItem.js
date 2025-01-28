@@ -22,13 +22,13 @@ const MoodItem = ({item}) => {
                     <button className="w-10 border border-black rounded-full p-2 ">➡️</button>
                 </div>
             </div>
-            <div className="flex flex-wrap justify-between space-x-5">
+            <div className="flex justify-between space-x-5 overflow-x-auto">
                 {
                     item.gridElements.infoWithStyle.info.map((restro) => {
                         
                         return (
-                            <div key={restro.id}>
-                                <img src={URL_MOOK + restro.imageId} className="w-44" alt="" />
+                            <div key={restro.id} className="min-w-48 hover:cursor-pointer">
+                                <img src={URL_MOOK + restro.imageId} className="min-w-48" alt="" />
                             </div>
                         )
                     })

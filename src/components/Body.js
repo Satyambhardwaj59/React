@@ -5,6 +5,8 @@ import { Link } from "react-router";
 import { URL_RESTAURANT_CARD } from "../utils/constants"
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
+import Banner from "./Banner";
+import MoodItem from "./MoodItem";
 
 
 const Body = () => {
@@ -13,6 +15,8 @@ const Body = () => {
     const [filterdRestaurant, setFilterdRestaurant] = useState([]);
 
     const [searchText, setSearchText] = useState("");
+
+    const [moodItems, setMoodItems] = useState([]);
 
     const RestaurantCardWithOffer = withFlatOffer(RestaurantCard);
 
@@ -30,6 +34,7 @@ const Body = () => {
 
         setListOfResto(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         setFilterdRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setMoodItems(json?.data?.cards[0]?.card?.card);
     }
 
     const onlineStatus = useOnlineStatus();
@@ -61,6 +66,13 @@ const Body = () => {
                      </div>     
                 </div>
                 
+                <div className="my-4">
+                    <Banner/>
+                </div>
+
+                <div>
+                    <MoodItem item={moodItems}/>
+                </div>
                
             
             <div className="flex flex-wrap justify-around space-y-4">

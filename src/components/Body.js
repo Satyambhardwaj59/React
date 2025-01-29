@@ -7,7 +7,6 @@ import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
 import Banner from "./Banner";
 import MoodItem from "./MoodItem";
-import TopRestroInAllCity from "./TopRestroInAllCity";
 import BestCuisinesNearMe from "./BestCuisinesNearMe";
 
 
@@ -33,19 +32,14 @@ const Body = () => {
 
     const fetchData = async () => {
         const data = await fetch(URL_RESTAURANT_CARD);
-
         const json = await data.json();
-        console.log(json);
         
-
         setListOfResto(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         setFilterdRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         setMoodItems(json?.data?.cards[0]?.card?.card);
         setTopRestroInCity(json?.data?.cards[6]?.card?.card);
         setBestCuisines(json?.data?.cards[7]?.card?.card);
     }
-
-    console.log(bestCuisines);
     
     const onlineStatus = useOnlineStatus();
     if(onlineStatus === false) return <h1>Look's Like your Internet is tern off Please check your connection !!!</h1>;

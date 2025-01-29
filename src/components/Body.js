@@ -7,6 +7,8 @@ import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
 import Banner from "./Banner";
 import MoodItem from "./MoodItem";
+import TopRestroInAllCity from "./TopRestroInAllCity";
+import BestCuisinesNearMe from "./BestCuisinesNearMe";
 
 
 const Body = () => {
@@ -17,6 +19,8 @@ const Body = () => {
     const [searchText, setSearchText] = useState("");
 
     const [moodItems, setMoodItems] = useState([]);
+    const [topRestroInCity, setTopRestroInCity] = useState([]);
+    const [bestCuisines, setBestCuisines] = useState([]);
 
     const RestaurantCardWithOffer = withFlatOffer(RestaurantCard);
 
@@ -31,17 +35,23 @@ const Body = () => {
         const data = await fetch(URL_RESTAURANT_CARD);
 
         const json = await data.json();
+        console.log(json);
+        
 
         setListOfResto(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         setFilterdRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         setMoodItems(json?.data?.cards[0]?.card?.card);
+        setTopRestroInCity(json?.data?.cards[6]?.card?.card);
+        setBestCuisines(json?.data?.cards[7]?.card?.card);
     }
 
+    console.log(bestCuisines);
+    
     const onlineStatus = useOnlineStatus();
     if(onlineStatus === false) return <h1>Look's Like your Internet is tern off Please check your connection !!!</h1>;
 
     return listOfResto.length === 0 ? <Shimmer/> :  (
-        <div className="body">
+        <div className="body w-11/12 mx-auto">
                 <div className="m-4 p-4 flex space-x-5 ">
                     <input type="text" className="border border-solid border-black p-2 rounded-xl" placeholder="Search for Restaurants" value={searchText}  onChange={(e) => {
                         setSearchText(e.target.value);
@@ -86,6 +96,13 @@ const Body = () => {
                      </Link>
                 ))}
                 
+            </div>
+            <div>
+                <BestCuisinesNearMe cusines= {topRestroInCity} />
+                <BestCuisinesNearMe cusines= {bestCuisines} />
+            </div>
+            <div>
+               
             </div>
         </div>
     )

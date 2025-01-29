@@ -7,7 +7,7 @@ const RestaurantCard = (props) => {
     const {loggedInUser} = useContext(UserContext);
     const { resData } = props;
 
-    const {cloudinaryImageId, name, cuisines, costForTwo, avgRating, sla, locality, areaName, } = resData?.info;
+    const {cloudinaryImageId, name, cuisines, costForTwo, avgRating, sla} = resData?.info;
     
 
     return (
@@ -18,8 +18,7 @@ const RestaurantCard = (props) => {
                 <h4>{cuisines.join(", ")}</h4>
                 <h4>{costForTwo}</h4>
                 <h4>{avgRating + " Stars"}</h4>
-                <h4>{sla.deliveryTime + " min"}</h4>
-                <h4>{locality + ", " + areaName}</h4>
+                <h4>{sla.deliveryTime + " min"}</h4>               
                 <h4>User: {loggedInUser}</h4>
             </div>
         </div>

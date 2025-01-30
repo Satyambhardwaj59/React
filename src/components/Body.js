@@ -45,19 +45,19 @@ const Body = () => {
     if(onlineStatus === false) return <h1>Look's Like your Internet is tern off Please check your connection !!!</h1>;
 
     return listOfResto.length === 0 ? <Shimmer/> :  (
-        <div className="body w-11/12 mx-auto">
+        <div className="body ">
                 <div className="m-4 p-4 flex space-x-5 ">
                     <input type="text" className="border border-solid border-black p-2 rounded-xl" placeholder="Search for Restaurants" value={searchText}  onChange={(e) => {
                         setSearchText(e.target.value);
                     }}/>
-                    <button className="border border-solid border-black p-2 rounded-xl bg-slate-500 text-white" onClick={ () => {
+                    <button className="border border-solid border-black p-2 rounded-xl bg-gray-200 text-black" onClick={ () => {
                         console.log(searchText);
 
                         const filterdRestro = listOfResto.filter((res) => res.info.name.toLowerCase().includes(searchText.toLowerCase()));
                         setFilterdRestaurant(filterdRestro);
 
                     }}>Search</button>
-                     <button className="filter-btn border border-solid border-black p-2 rounded-xl bg-slate-500 text-white " onClick = {  () => {
+                     <button className="filter-btn border border-solid border-black p-2 rounded-xl bg-gray-200 text-black " onClick = {  () => {
                         const filterdList = listOfResto.filter(
                          (res) => res.info.avgRating > 4.2
                           );               
@@ -78,8 +78,10 @@ const Body = () => {
                     <MoodItem item={moodItems}/>
                 </div>
                
-            
-            <div className="flex flex-wrap justify-around space-y-4">
+            <div>
+                <h1 className="mt-14 mb-4 text-3xl font-bold">Top restaurant chains in Delhi</h1>
+            </div>
+            <div className="flex flex-wrap justify-around space-y-4 border-b-2 border-black">
                 {
                     filterdRestaurant.map(restaurant => (
                    <Link key = {restaurant.info.id} to={"/restaurent/" + restaurant.info.id}>
@@ -94,9 +96,6 @@ const Body = () => {
             <div>
                 <BestCuisinesNearMe cusines= {topRestroInCity} />
                 <BestCuisinesNearMe cusines= {bestCuisines} />
-            </div>
-            <div>
-               
             </div>
         </div>
     )

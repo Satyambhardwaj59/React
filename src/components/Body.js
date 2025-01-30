@@ -81,7 +81,7 @@ const Body = () => {
             <div>
                 <h1 className="mt-14 mb-4 text-3xl font-bold">Top restaurant chains in Delhi</h1>
             </div>
-            <div className="flex flex-wrap justify-around space-y-4 border-b-2 border-black">
+            <div className="flex flex-wrap justify-around my-4 border-b-2 border-black">
                 {
                     filterdRestaurant.map(restaurant => (
                    <Link key = {restaurant.info.id} to={"/restaurent/" + restaurant.info.id}>

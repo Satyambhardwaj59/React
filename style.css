@@ -1,3 +1,84 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#slider-boxes{
+    display: flex !important;
+}
+
+.slick-slide div{
+    margin:  10px;
+}
+
+.slick-arrow::before {
+    color: orange;
+    font-size: 50px;
+}
+
+.slick-prev {
+    top: -75px;
+    left: 1170px;
+}
+
+.slick-next {
+    top: -75px;
+    right: 26px;
+}
+
+@media only screen and (max-width: 1400px) {
+    .slick-prev {
+        left: 1000px;
+    }
+
+}    
+
+@media only screen and (max-width: 1275px) {
+    .slick-prev {
+        left: 900px;
+    }
+
+}   
+@media only screen and (max-width: 1160px) {
+    .slick-prev {
+        left: 800px;
+    }
+
+}   
+@media only screen and (max-width: 1050px) {
+    .slick-prev {
+        left: 600px;
+    }
+
+}   
+
+@media only screen and (max-width: 950px) {
+    .slick-prev {
+        left: 550px;
+    }
+
+}   
+@media only screen and (max-width: 850px) {
+    .slick-prev {
+        left: 500px;
+    }
+
+}   
+
+@media only screen and (max-width: 700px) {
+    .slick-prev {
+        left: 400px;
+    }
+
+}   
+
+@media only screen and (max-width: 600px) {
+    .slick-prev {
+        top: 150px;
+        left: -50px;
+    }
+
+    .slick-next {
+        top: 150px;
+        right: -26px;
+    }
+} 

@@ -56,26 +56,32 @@ const Body = () => {
                 <MoodItem item={moodItems} />
             </div>
 
-            <div className="m-4 p-4 flex space-x-5 ">
-                <input type="text" className="border border-solid border-black p-2 rounded-xl" placeholder="Search for Restaurants" value={searchText} onChange={(e) => {
-                    setSearchText(e.target.value);
-                }} />
-                <button className="border border-solid border-black p-2 rounded-xl bg-gray-200 text-black" onClick={() => {
-                    console.log(searchText);
+            <div className=" flex flex-col md:flex-row align-middle ">
+                <div className="flex flex-col sm:flex-row ">
+                    <div className="">
+                        <input type="text" className="border border-solid border-black p-2 ml-3 rounded-xl" placeholder="Search for Restaurants" value={searchText} onChange={(e) => {
+                            setSearchText(e.target.value);
+                        }} />
+                        <button className="border border-solid border-black p-2 rounded-xl ml-3 bg-gray-200 text-black" onClick={() => {
+                            console.log(searchText);
 
-                    const filterdRestro = listOfResto.filter((res) => res.info.name.toLowerCase().includes(searchText.toLowerCase()));
-                    setFilterdRestaurant(filterdRestro);
+                            const filterdRestro = listOfResto.filter((res) => res.info.name.toLowerCase().includes(searchText.toLowerCase()));
+                            setFilterdRestaurant(filterdRestro);
 
-                }}>Search</button>
-                <button className="filter-btn border border-solid border-black p-2 rounded-xl bg-gray-200 text-black " onClick={() => {
-                    const filterdList = listOfResto.filter(
-                        (res) => res.info.avgRating > 4.2
-                    );
-                    setFilterdRestaurant(filterdList);
-                }
-                }>Top Rated Restro..</button>
-                <div className="p-2">
-                    <label>User Name : </label>
+                        }}>Search</button>
+                    </div>
+                    <div className="mt-4 ml-12 sm:mt-0 sm:ml-0 ">
+                        <button className="filter-btn border border-solid border-black p-2 ml-3 rounded-xl bg-gray-200 text-black " onClick={() => {
+                            const filterdList = listOfResto.filter(
+                                (res) => res.info.avgRating > 4.2
+                            );
+                            setFilterdRestaurant(filterdList);
+                        }
+                        }>Top Rated Restro..</button>
+                    </div>
+                </div>
+                <div className="mt-4 md:my-0 ml-4 p-2">
+                    <label className="border-b-2 border-black mr-2 text-xl font-semibold">User Name : </label>
                     <input className="border border-black rounded-xl p-2" type="text" placeholder="User Name..." value={loggedInUser} onChange={(e) => setUserName(e.target.value)} />
                 </div>
             </div>

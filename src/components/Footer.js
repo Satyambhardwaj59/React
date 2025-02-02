@@ -4,11 +4,11 @@ import { Link } from "react-router";
 
 const Footer = () => {
     return (
-        <div className="flex justify-around my-4 py-8 px-4 mx-auto border border-solid border-black bg-gray-200" >
-            <div className="copyR" >
-                    <img className="w-28 cursor-pointer mb-4 " src={URL_LOGO} alt="footer-logo" />
+        <div className="flex flex-col  sm:flex-row justify-around my-4 py-8 px-4 mx-auto border border-solid border-black bg-gray-200" >
+            <div className="sm:w-1/3 pl-20 sm:pl-4 my-6 justify-center" >
+                    <img className="w-28 cursor-pointer mb-4 rounded-full " src={URL_LOGO} alt="footer-logo" />
                     <h3 className="text-xl font-semibold hover:text-orange-500 hover:cursor-pointer"> © Copyright Satyam Bhardwaj</h3>
-                    <div className="flex justify-around items-center mt-4">
+                    <div className="flex justify-around w-1/2 items-center mt-4">
                         <Link to="https://www.linkedin.com/in/satyam-kumar-297a3b27b/">
                             <img className="w-8 m-2 cursor-pointer" src="https://img.icons8.com/color/48/000000/linkedin.png" alt="linkedin" />
                         </Link>
@@ -27,15 +27,14 @@ const Footer = () => {
                         
                     </div>
             </div>
-            <div className="">
+            <div className="flex justify-around sm:w-2/3 items-center">
                 <ul className="flex flex-col gap-y-4 text-xl list-none ">
                     <li className="hover:text-orange-500 hover:cursor-pointer">Home</li>
                     <li className="hover:text-orange-500 hover:cursor-pointer">About us</li>
                     <li className="hover:text-orange-500 hover:cursor-pointer">Contact us</li>
                     <li className="hover:text-orange-500 hover:cursor-pointer">Email</li>
                 </ul>
-            </div>
-            <div className="">
+                     
                 <ul className="flex flex-col gap-y-4 text-xl list-none ">
                     <li className="hover:text-orange-500 hover:cursor-pointer">Home</li>
                     <li className="hover:text-orange-500 hover:cursor-pointer">About us</li>

@@ -20,16 +20,16 @@ const Header = () => {
 
 
   return (
-    <div className="shadow-md  my-4 ">
+    <div className="shadow-md  my-4">
       <div className="md:flex justify-between bg-gray-200 ">
         <div >
-          <img className="w-[120]" src={URL_LOGO} alt="logo" />
+          <img className="w-[120] rounded-full " src={URL_LOGO} alt="logo" />
         </div>
         <div>
           <div onClick={() => setShowMenu(!showMenu)} className="text-3xl absolute right-8 top-6 cursor-pointer md:hidden">
             {showMenu ? '✖' : '☰'}
           </div>
-          <div className="  mt-12 mr-4">
+          <div className="  mt-14 mr-4">
             <ul className={`text-2xl md:flex md:justify-around md:items-center md:pb-0 pb-12 md:gap-6 md:static md:z-auto z-[-1] left-0 w-full   md:pl-0 pl-10 transition-all duration-500 ease-in ${showMenu ? 'top-[130] text-left w-[200] mx-auto justify-center opacity-100' : 'top-[-490px] h-0'} md:opacity-100 opacity-0 `}>
               <li className="mb-2 hover:text-orange-500 "> <Link to="/">Home</Link></li>
               <li className="mb-2 hover:text-orange-500 "> <Link to="/about">About us</Link></li>

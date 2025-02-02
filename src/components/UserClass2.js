@@ -36,7 +36,7 @@ class UserClass2 extends React.Component {
         const {name, location, avatar, bio, contact} = this.state.userInfo;
 
         return (
-            <div className="flex justify-around m-8 p-4 border-2 border-solid border-orange-300">
+            <div className="flex flex-col sm:flex-row ml-[1] md:ml-4 mt-3 sm:mt-0  justify-around m-[1] md:m-8 p-1 sm:p-4 border-2 border-solid border-orange-300">
                 <img src={avatar} alt=""  className="w-[200] rounded-full"/>
                 <div className='text-xl space-y-2'>
                     <h1 className='text-orange-500'>Name : {name}</h1>

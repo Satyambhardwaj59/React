@@ -18,8 +18,13 @@ const Header = () => {
   return (
     <div className="shadow-md bg-gray-200">
       <div className="md:flex justify-around max-w-[1400px] mx-auto">
+
+        <div className="">
+          <img className="w-[120] px-4 py-4 rounded-full" src={URL_LOGO} alt="logo" />
+
         <div>
           <img className="w-[120] px-4 py-4" src={URL_LOGO} alt="logo" />
+
         </div>
         <div className="flex items-center">
           <div onClick={() => setShowMenu(!showMenu)} className="text-3xl absolute right-8 top-6 cursor-pointer md:hidden">
@@ -44,7 +49,11 @@ const Header = () => {
               </li>
               <li className="mb-2 hover:text-orange-500">
                 <Link to="/cart">
+
+                  Cart - (<span className="text-orange-500">{cartItems.length}</span>)
+
                   Cart - (<span className="text-orange-500">{cartItems.length}</span> items)
+
                 </Link>
               </li>
               <button
@@ -75,6 +84,7 @@ const Header = () => {
 
 export default Header;
 
+
 // return (
 //   <div className="flex justify-between bg-gray-200 my-4 shadow-lg">
 //     <div >
@@ -102,3 +112,4 @@ export default Header;
 
 //   </div>
 // )
+

@@ -20,7 +20,7 @@ const ItemList = ({items}) => {
                 return (
                     <div key={id} className="p-2 m-4 bg-gray-100 shadow-lg rounded-lg flex justify-between">
                         <div className='w-9/12 text-left'>
-                            <div className='flex ml-4 space-x-6'>
+                            <div className='flex flex-col sm:flex-row ml-4 mt-3 sm:mt-0 space-x-6'>
                                 <div className='mt-4'>
                                     <span className='text-3xl border-2 border-black border-solid p-1 rounded-lg'>{isVeg ? "🌱": "🔴"}</span>                
                                 </div>
@@ -30,7 +30,7 @@ const ItemList = ({items}) => {
                                 </div>
                             </div>
                             
-                            <p className='text-xs p-4'>{description}</p>
+                            <p className='text-xs p-4 hidden sm:block'>{description}</p>
                         </div>
                         <div className=''>
                              <img src={URL_MOOK + imageId } className='w-40 h-28 rounded-xl px-4 bg-cover' alt="" />

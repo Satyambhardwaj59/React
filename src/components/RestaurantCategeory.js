@@ -12,7 +12,7 @@ const RestaurantCategeory = ({data, showItems, setShowIndex}) => {
     
     return (
         <div>
-            <div className="w-6/12 mx-auto my-4 bg-gray-200 rounded-lg shadow-lg p-4">
+            <div className="w-11/12 md:w-6/12 mx-auto my-4 bg-gray-200 rounded-lg shadow-lg p-4">
 
                 <div className="flex justify-between w-full cursor-pointer" 
                     onClick={handleClick}

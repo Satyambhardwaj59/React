@@ -21,6 +21,8 @@ const Body = () => {
     const [topRestroInCity, setTopRestroInCity] = useState([]);
     const [bestCuisines, setBestCuisines] = useState([]);
 
+    const [checkName, setCheckName] = useState();
+
     const RestaurantCardWithOffer = withFlatOffer(RestaurantCard);
 
     const { loggedInUser, setUserName } = useContext(UserContext);
@@ -34,6 +36,7 @@ const Body = () => {
         const data = await fetch(URL_RESTAURANT_CARD);
         const json = await data.json();
 
+        setCheckName(json?.data?.cards[1]?.card?.card.header.title);
         setListOfResto(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         setFilterdRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         setMoodItems(json?.data?.cards[0]?.card?.card);
@@ -87,7 +90,7 @@ const Body = () => {
             </div>
 
             <div>
-                <h1 className="mt-14 mb-4 text-3xl font-bold">Top restaurant chains in Delhi</h1>
+                <h1 className="mt-14 mb-4 text-3xl font-bold">{checkName}</h1>
             </div>
             <div className="flex flex-wrap justify-around my-4 border-b-2 border-black">
                 {

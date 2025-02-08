@@ -1,7 +1,7 @@
 import ItemList from "./ItemList";
 import { useSelector } from "react-redux";
 import { useDispatch } from 'react-redux';
-import { clearCart} from '../utils/cartSlice';
+import { clearCart, removeItem } from '../utils/cartSlice';
 
 
 const Cart = () => {
@@ -12,6 +12,10 @@ const Cart = () => {
     const handleClaerCart = () => {
         dispatch(clearCart());
     };
+
+    const handleRemoveItem = () => {
+        dispatch(removeItem());
+    };
     
     return (
         <div className="my-5 p-4">
@@ -19,6 +23,8 @@ const Cart = () => {
             
             <div className="w-11/12 md:w-6/12 mx-auto">
                 <div className="flex justify-end ">
+
+                    <button className="border-2 bg-orange-400 mr-4 hover:bg-orange-600 font-bold text-white p-2 rounded-lg text-xl" onClick={handleRemoveItem}>Delete Last Item</button>
                     <button className="border-2 bg-orange-400 hover:bg-orange-600 font-bold text-white p-2 rounded-lg text-xl" onClick={handleClaerCart}>Clear Cart</button>
                 </div>
                 <div>

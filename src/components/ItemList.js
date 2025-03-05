@@ -1,6 +1,7 @@
 import { useDispatch } from 'react-redux';
 import {URL_MOOK} from '../utils/constants';
 import { addItem, clearCart, removeItem } from '../utils/cartSlice';
+import { useState } from 'react';
 
 const ItemList = ({items}) => {
 
@@ -8,7 +9,10 @@ const ItemList = ({items}) => {
 
     const handleAddItem = (item) => {
         dispatch(addItem(item));
+        setBtnBgColor('bg-orange-500');
     };
+
+    const [btnBgColor, setBtnBgColor] = useState('bg-black');
     
     
     return (
@@ -34,8 +38,8 @@ const ItemList = ({items}) => {
                         </div>
                         <div className=''>
                              <img src={URL_MOOK + imageId } className='w-40 h-28 rounded-xl px-4 bg-cover' alt="" />
-                             <button className='bg-black text-white font-bold text-2xl mx-4 cursor-pointer px-2'
-                             onClick={() => handleAddItem(item)}
+                             <button className =   {` ${btnBgColor} text-white font-bold text-2xl mx-4 cursor-pointer px-2 `}
+                             onClick={() => handleAddItem(item)} 
                              > Add +
                              </button>
                         </div>

@@ -1,3 +1,5 @@
+import Notfi from "./Notfi";
+
 const Contact = () => {
     return (
         <div className="m-4 p-4">
@@ -8,6 +10,7 @@ const Contact = () => {
                 <input type="text" placeholder="Message" className="border border-black p-2 m-4" />
                 <button className="border border-black p-2 rounded-lg bg-gray-100">Submit</button>
             </form>
+            <Notfi/>
         </div>
     )
 }

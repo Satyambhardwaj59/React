@@ -1,7 +1,9 @@
 import { useDispatch } from 'react-redux';
 import {URL_MOOK} from '../utils/constants';
 import { addItem, clearCart, removeItem } from '../utils/cartSlice';
-import { useState } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
+
+const notify = () => toast('Congratulations!🥳 Your Item Added to Cart');
 
 const ItemList = ({items}) => {
 
@@ -9,12 +11,9 @@ const ItemList = ({items}) => {
 
     const handleAddItem = (item) => {
         dispatch(addItem(item));
-        setBtnBgColor('bg-orange-500');
+        notify();
     };
-
-    const [btnBgColor, setBtnBgColor] = useState('bg-black');
-    
-    
+       
     return (
         <div>
            {
@@ -38,10 +37,22 @@ const ItemList = ({items}) => {
                         </div>
                         <div className=''>
                              <img src={URL_MOOK + imageId } className='w-40 h-28 rounded-xl px-4 bg-cover' alt="" />
-                             <button className =   {` ${btnBgColor} text-white font-bold text-2xl mx-4 cursor-pointer px-2 `}
+                             <button className =   " w-32 bg-black text-white font-bold text-2xl mx-4 cursor-pointer px-2" 
                              onClick={() => handleAddItem(item)} 
                              > Add +
                              </button>
+                             <Toaster 
+                                toastOptions={{
+                                className: '',
+                                style: {
+                                    border: '1px solid #713200',
+                                    padding: '16px',
+                                    color: '#FFF',
+                                    backgroundColor: "#FFA500",
+                                    fontSize: '20px'
+                                },
+                                }}
+                            />
                         </div>
                     </div>
                 )

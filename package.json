@@ -2,10 +2,12 @@
   "name": "namastereact",
   "version": "1.0.0",
   "description": "This is Namaste React cource",
+  "proxy": "http://localhost:1234/",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel index.html",
     "test": "jest"
+
   },
   "repository": {
     "type": "git",
